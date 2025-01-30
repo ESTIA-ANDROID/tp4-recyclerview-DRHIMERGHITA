@@ -35,5 +35,7 @@ object FakeApiServiceGenerator {
         User("025", "Leopold", "https://robohash.org/25.png?size=300x300")
     )
 
+
+
     fun getRandomUser(): User = FAKE_USERS_RANDOM.random()
 }
