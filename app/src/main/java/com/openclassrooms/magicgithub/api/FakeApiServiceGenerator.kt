@@ -1,42 +1,39 @@
 package com.openclassrooms.magicgithub.api
 
 import com.openclassrooms.magicgithub.model.User
-import kotlin.random.Random
 
 object FakeApiServiceGenerator {
 
-    val FAKE_USERS = mutableListOf(
-        User("001", "Jake", "https://avatars.dicebear.com/api/human/1.svg"),
-        User("002", "Paul", "https://avatars.dicebear.com/api/human/2.svg"),
-        User("003", "Phil", "https://avatars.dicebear.com/api/human/3.svg"),
-        User("004", "Guillaume", "https://avatars.dicebear.com/api/human/4.svg"),
-        User("005", "Francis", "https://avatars.dicebear.com/api/human/5.svg"),
-        User("006", "George", "https://avatars.dicebear.com/api/human/6.svg"),
-        User("007", "Louis", "https://avatars.dicebear.com/api/human/7.svg"),
-        User("008", "Mateo", "https://avatars.dicebear.com/api/human/8.svg"),
-        User("009", "April", "https://avatars.dicebear.com/api/human/9.svg"),
-        User("010", "Louise", "https://avatars.dicebear.com/api/human/10.svg"),
-        User("011", "Elodie", "https://avatars.dicebear.com/api/human/11.svg"),
-        User("012", "Helene", "https://avatars.dicebear.com/api/human/12.svg"),
-        User("013", "Fanny", "https://avatars.dicebear.com/api/human/13.svg"),
-        User("014", "Laura", "https://avatars.dicebear.com/api/human/14.svg"),
-        User("015", "Gertrude", "https://avatars.dicebear.com/api/human/15.svg"),
-        User("016", "Chloé", "https://avatars.dicebear.com/api/human/16.svg"),
-        User("017", "April", "https://avatars.dicebear.com/api/human/17.svg"),
-        User("018", "Marie", "https://avatars.dicebear.com/api/human/18.svg"),
-        User("019", "Henri", "https://avatars.dicebear.com/api/human/19.svg"),
-        User("020", "Rémi", "https://avatars.dicebear.com/api/human/20.svg")
+    val FAKE_USERS: MutableList<User> = mutableListOf(
+        User("001", "Jake", "https://robohash.org/6.png?size=300x300"),
+        User("002", "Paul", "https://robohash.org/2.png?size=300x300"),
+        User("003", "Phil", "https://robohash.org/3.png?size=300x300"),
+        User("004", "Guillaume", "https://robohash.org/4.png?size=300x300"),
+        User("005", "Francis", "https://robohash.org/5.png?size=300x300"),
+        User("006", "George", "https://robohash.org/10.png?size=300x300"),
+        User("007", "Louis", "https://robohash.org/7.png?size=300x300"),
+        User("008", "Mateo", "https://robohash.org/8.png?size=300x300"),
+        User("009", "April", "https://robohash.org/11.png?size=300x300"),
+        User("010", "Louise", "https://robohash.org/1.png?size=300x300"),
+        User("011", "Elodie", "https://robohash.org/9.png?size=300x300"),
+        User("012", "Helene", "https://robohash.org/12.png?size=300x300"),
+        User("013", "Fanny", "https://robohash.org/13.png?size=300x300"),
+        User("014", "Laura", "https://robohash.org/14.png?size=300x300"),
+        User("015", "Gertrude", "https://robohash.org/15.png?size=300x300"),
+        User("016", "Chloé", "https://robohash.org/16.png?size=300x300"),
+        User("017", "April", "https://robohash.org/17.png?size=300x300"),
+        User("018", "Marie", "https://robohash.org/18.png?size=300x300"),
+        User("019", "Henri", "https://robohash.org/19.png?size=300x300"),
+        User("020", "Rémi", "https://robohash.org/20.png?size=300x300")
     )
 
-    private val FAKE_USERS_RANDOM = listOf(
-        User("021", "Lea", "https://avatars.dicebear.com/api/human/21.svg"),
-        User("022", "Geoffrey", "https://avatars.dicebear.com/api/human/22.svg"),
-        User("023", "Simon", "https://avatars.dicebear.com/api/human/23.svg"),
-        User("024", "André", "https://avatars.dicebear.com/api/human/24.svg"),
-        User("025", "Leopold", "https://avatars.dicebear.com/api/human/25.svg")
+    private val FAKE_USERS_RANDOM: List<User> = listOf(
+        User("021", "Lea", "https://robohash.org/21.png?size=300x300"),
+        User("022", "Geoffrey", "https://robohash.org/22.png?size=300x300"),
+        User("023", "Simon", "https://robohash.org/23.png?size=300x300"),
+        User("024", "André", "https://robohash.org/24.png?size=300x300"),
+        User("025", "Leopold", "https://robohash.org/25.png?size=300x300")
     )
 
-    fun getRandomUser(): User {
-        return FAKE_USERS_RANDOM.random()
-    }
+    fun getRandomUser(): User = FAKE_USERS_RANDOM.random()
 }
