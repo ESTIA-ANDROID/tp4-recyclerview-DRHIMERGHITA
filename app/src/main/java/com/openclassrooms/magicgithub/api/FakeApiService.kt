@@ -4,21 +4,20 @@ import com.openclassrooms.magicgithub.model.User
 
 class FakeApiService : ApiService {
 
-
-    private val users = mutableSetOf<User>().apply {
-        addAll(FakeApiServiceGenerator.FAKE_USERS)
-    }
+    // Référence à la liste mutable d'utilisateurs fictifs
+    private val _users = FakeApiServiceGenerator.FAKE_USERS
 
     override fun getUsers(): List<User> {
-        return users.toList()
+        return _users // Retourne la liste des utilisateurs
     }
 
     override fun addRandomUser() {
-        val randomUser = FakeApiServiceGenerator.getRandomUser()
-        users.add(randomUser)
+        // Ajout d'un utilisateur aléatoire à partir de la liste prédéfinie
+        _users.add(FakeApiServiceGenerator.FAKE_USERS_RANDOM.random())
     }
 
     override fun deleteUser(user: User) {
-        users.remove(user)
+        // Suppression d'un utilisateur de la liste
+        _users.remove(user)
     }
 }

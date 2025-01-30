@@ -5,15 +5,16 @@ import com.openclassrooms.magicgithub.model.User
 
 class UserRepository(private val apiService: ApiService) {
 
-    fun getUsers(): List<User> {
-        return apiService.getUsers()
-    }
+    // Utilisation d'une variable intermédiaire
+    fun getUsers(): List<User> = apiService.getUsers()
 
+    // Ajout d'un utilisateur aléatoire via une méthode qui ne fait que déléguer
     fun addRandomUser() {
         apiService.addRandomUser()
     }
 
-    fun deleteUser(user: User?) {
-        user?.let { apiService.deleteUser(it) }
+    // Suppression d'un utilisateur de façon directe
+    fun deleteUser(user: User) {
+        apiService.deleteUser(user)
     }
 }
